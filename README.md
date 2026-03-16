@@ -26,7 +26,7 @@
           <img src="https://img.shields.io/badge/-scikit--learn-%23F7931E?logo=scikit-learn&logoColor=white"/>
           <img src="https://img.shields.io/badge/Jupyter-ffffff?logo=Jupyter"/>
         </p>
-        <a href="https://github.com/vishnumuthyalu/project-one" target="_blank">
+        <a href="https://github.com/vishnumuthyalu/AgeEmotionDetection" target="_blank">
           <img src="https://img.shields.io/badge/⭐ Repo-100000?style=for-the-badge&logo=github&logoColor=white"/>
         </a>
       </div>
