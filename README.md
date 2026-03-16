@@ -1,16 +1,3 @@
-<!--
-Credits and references used in this README:
-
-1) Layout ideas and section inspiration:
-   https://github.com/abhisheknaiidu/awesome-github-profile-readme?tab=readme-ov-file#descriptive-
-
-2) Skill icons (SVG badges):
-   https://github.com/tandpfun/skill-icons?tab=readme-ov-file#icons-list
-
-3) GitHub stats card:
-   https://github.com/anuraghazra/github-readme-stats
--->
-
 # VISHNU MUTHYALU
 **Software Engineering and Data Science** 
 
@@ -41,5 +28,5 @@ Credits and references used in this README:
   <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" />
 </a>
 
-<!-- Optional: fun GIF. Consider replacing with contribution streak or removing for a tighter, more professional finish. -->
+Optional: fun GIF. Consider replacing with contribution streak or removing for a tighter, more professional finish.
 ![image](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXh2ZzdlYWZndHl2dWcyb2RveHlpYzhsand5YmRmaHRwdXhlcGZhZyZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/l3q2wJsC23ikJg9xe/giphy.gif)
