@@ -91,6 +91,46 @@
       </div>
     </td>
   </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3 align="center">Relay Extension</h3>
+      <div align="center">
+        <br/><br/>
+        <p>Built a GitHub webhook-powered system that automatically generates non-technical email summaries of code changes and delivers them to clients. Every push triggers Claude AI to summarize commits in plain language; a companion VS Code extension handles zero-friction webhook registration and client mapping.</p>
+        <p>
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000"/>
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Express-000000?logo=express&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Claude%20AI-D97757?logo=anthropic&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/SQLite-%2307405e.svg?logo=sqlite&logoColor=white"/>
+        </p>
+        <a href="https://github.com/vishnumuthyalu/relay-extension" target="_blank">
+          <img src="https://img.shields.io/badge/⭐ Repo-100000?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+    <td width="50%" valign="top">
+      <h3 align="center">Waypoint API</h3>
+      <div align="center">
+        <br/><br/>
+        <p>A production-ready URL shortener built spec-first: the OpenAPI 3.1 contract was written and linted before any route handler existed, and every request and response is validated against it at runtime. Features URL shortening with custom aliases, click analytics, link expiration, and a full CI/CD pipeline.</p>
+        <p>
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Express-000000?logo=express&logoColor=white"/>
+          <img src="https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=githubactions&logoColor=fff"/>
+        </p>
+        <a href="https://github.com/vishnumuthyalu/waypoint-api" target="_blank">
+          <img src="https://img.shields.io/badge/⭐ Repo-100000?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 
 ---
@@ -106,10 +146,13 @@
 ---
 
 ## Links
-<!-- Section layout inspired by Awesome GitHub Profile README "Descriptive" patterns:
-     https://github.com/abhisheknaiidu/awesome-github-profile-readme?tab=readme-ov-file#descriptive- -->
-- [**Contact**](mailto:vm17college@gmail.com)
 
-<a href="https://www.linkedin.com/in/vishnu-muthyalu/" target="blank">
+<a href="mailto:vm17college@gmail.com" target="_blank">
+  <img src="https://skillicons.dev/icons?i=gmail" alt="Email" />
+</a>
+<a href="https://github.com/vishnumuthyalu" target="_blank">
+  <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
+</a>
+<a href="https://www.linkedin.com/in/vishnu-muthyalu/" target="_blank">
   <img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn" />
 </a>
