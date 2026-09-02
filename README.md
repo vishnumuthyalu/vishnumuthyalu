@@ -131,6 +131,29 @@
       </div>
     </td>
   </tr>
+    <tr>
+    <td colspan="2" valign="top">
+      <h3 align="center">Credit Risk Scorecard & Model Validation Framework</h3>
+      <div align="center">
+        <a href="https://github.com/vishnumuthyalu/Credit-Risk-Scorecard-Model-Validation-Framework" target="_blank">
+          <!-- <img src="assets\credit_risk_preview.png" width="100%" alt="Credit Risk Scorecard Preview" style="border-radius:8px"/> -->
+        </a>
+        <br/><br/>
+        <p>Built an end-to-end credit risk scorecard and independent model validation framework on Lending Club's full 1.27M-loan historical portfolio ($18.5B exposure, 2007–2018). Implemented Weight-of-Evidence feature engineering, a PDO-scaled logistic regression scorecard, and the discrimination, calibration, population stability, and fair-lending checks a bank's Model Risk Management team runs before a scorecard goes into production — plus vintage analysis, roll-rate modeling, and Expected Loss forecasting, all wired into a fully automated HTML validation report.</p>
+        <p>
+          <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+          <img src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/NumPy-4DABCF?logo=numpy&logoColor=fff"/>
+          <img src="https://img.shields.io/badge/-scikit--learn-%23F7931E?logo=scikit-learn&logoColor=white"/>
+          <img src="https://img.shields.io/badge/statsmodels-8CAAE6"/>
+          <img src="https://img.shields.io/badge/pytest-0A9EDC?logo=pytest&logoColor=white"/>
+        </p>
+        <a href="https://github.com/vishnumuthyalu/Credit-Risk-Scorecard-Model-Validation-Framework" target="_blank">
+          <img src="https://img.shields.io/badge/⭐ Repo-100000?style=for-the-badge&logo=github&logoColor=white"/>
+        </a>
+      </div>
+    </td>
+  </tr>
 </table>
 
 ---
