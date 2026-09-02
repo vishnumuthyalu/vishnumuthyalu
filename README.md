@@ -164,7 +164,7 @@
      - Theme list: ?theme=gruvbox,radical,tokyonight,onedark,dracula etc.
      - Show icons: &show_icons=true
      Docs: https://github.com/stats-organization/github-stats-extended -->
-[![Vishnu's GitHub stats](https://github-stats-extended.vercel.app/api?username=vishnumuthyalu)](https://github.com/stats-organization/github-stats-extended)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=vishnumuthyalu&layout=donut&langs_count=4&hide_values=true)](https://github-stats-extended.vercel.app/api/top-langs?username=vishnumuthyalu&layout=donut&langs_count=4&hide_values=true)
 
 ---
 
