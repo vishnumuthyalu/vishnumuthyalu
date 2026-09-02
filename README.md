@@ -158,13 +158,13 @@
 
 ---
 ## Stats
-<!-- Stats card by anuraghazra/github-readme-stats
+<!-- Stats card by stats-organization/github-stats-extended
      Customization guide:
      - Hide private contributions: &count_private=true|false
      - Theme list: ?theme=gruvbox,radical,tokyonight,onedark,dracula etc.
      - Show icons: &show_icons=true
-     Docs: https://github.com/anuraghazra/github-readme-stats -->
-![Vishnu's GitHub stats](https://github-readme-stats.vercel.app/api?username=vishnumuthyalu&show_icons=true&theme=gruvbox)
+     Docs: https://github.com/stats-organization/github-stats-extended -->
+[![Vishnu's GitHub stats](https://github-stats-extended.vercel.app/api?username=vishnumuthyalu)](https://github.com/stats-organization/github-stats-extended)
 
 ---
 
