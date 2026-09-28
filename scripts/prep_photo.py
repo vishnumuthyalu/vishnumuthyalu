@@ -13,7 +13,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 from PIL import Image
-from rembg import remove
+from rembg import new_session, remove
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "source-prepped.png"
@@ -21,7 +21,9 @@ OUT = ROOT / "source-prepped.png"
 
 def main(src: str) -> None:
     img = Image.open(src).convert("RGB")
-    cut = remove(img)  # RGBA, transparent background
+    img.thumbnail((1024, 1024))  # plenty for a ~100-col grid, and much lighter
+    # portrait-specific model: lighter than rembg's default and better on hair/beards
+    cut = remove(img, session=new_session("u2net_human_seg"))  # RGBA, transparent bg
 
     rgba = np.array(cut)
     alpha = rgba[..., 3:4].astype(np.float32) / 255.0
@@ -41,7 +43,11 @@ def main(src: str) -> None:
         x0, x1 = max(xs.min() - m, 0), min(xs.max() + m, out.shape[1])
         out = out[y0:y1, x0:x1]
 
-    Image.fromarray(out.clip(0, 255).astype(np.uint8), "L").save(OUT)
+    # keep the cut-out mask as alpha so the ASCII step can blank the background exactly
+    a = (alpha[..., 0] * 255).astype(np.uint8)
+    if len(xs):
+        a = a[y0:y1, x0:x1]
+    Image.fromarray(np.dstack([out.clip(0, 255).astype(np.uint8), a]), "LA").save(OUT)
     print(f"wrote {OUT.name} {out.shape[1]}x{out.shape[0]}")
 
 
