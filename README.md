@@ -40,7 +40,7 @@
 
 <h3><code>vishnu@github ~ $ contact --all</code></h3>
 
-<a href="mailto:vm17college@gmail.com" target="_blank">
+<a href="mailto:vishnu.muthyalu.work@gmail.com" target="_blank">
   <img src="https://skillicons.dev/icons?i=gmail" alt="Email" />
 </a>
 <a href="https://github.com/vishnumuthyalu" target="_blank">
