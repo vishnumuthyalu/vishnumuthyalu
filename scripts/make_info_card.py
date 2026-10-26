@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "info-card.svg"
 STATIC = os.environ.get("STATIC") == "1"
 
-W, H = 490, 380
+W = 490  # height is computed from the content
 BG, FG, DIM, BORDER = "#0d1117", "#c9d1d9", "#6e7681", "#30363d"
 KEY = "#58a6ff"
 ACCENT = "#39d353"
@@ -21,18 +21,22 @@ USER, HOST = "vishnu", "github"
 ROWS = [
     ("OS", "Rice University · MS Computer Science"),
     ("Uptime", "Fall 2026 → May 2028"),
-    ("Now", "Seeking Summer 2027 SWE internships"),
-    ("Focus", "Backend · Full-stack · Infra · Data"),
-    ("Langs", "TypeScript, Python, Java, Kotlin, SQL"),
-    ("Stack", "Node/Express, React, PostgreSQL, Prisma"),
-    ("Infra", "Docker, Kubernetes, NGINX, GH Actions"),
+    ("Now", "Seeking Spring + Summer 2027 SWE & DS internships"),
+    ("Focus", "Backend · Frontend · ML · Infra · Data"),
+    ("Langs", "Python, C/C++, Java, C#, JS/TS, SQL, R"),
+    ("Web", "Node.js, Express, React, .NET, FastAPI, Flask"),
+    ("Data", "PostgreSQL, Redis, pandas, NumPy, Prisma"),
+    ("ML", "PyTorch, TensorFlow, scikit-learn, statsmodels"),
+    ("Infra", "Docker, Kubernetes, Argo CD, NGINX, Fly.io, AWS"),
+    ("CI/QA", "GitHub Actions, Jest, pytest, k6, OpenAPI"),
+    ("AI", "Claude API, MCP servers, OAuth 2.1"),
 ]
 HIGHLIGHTS = [
-    "Waypoint API: spec-first URL shortener on k8s",
-    "Relay: git push → AI-written client updates",
-    "Credit risk scorecard on 1.27M loans",
+    "Relay: live multi-tenant GitHub App + MCP server",
+    "Waypoint: 4 microservices, p99 763 ms → 8 ms",
+    "Whisker: Best Hardware win at CodeRED 2026",
 ]
-CONTACT = ("Mail", "vm17college@gmail.com")
+CONTACT = ("Mail", "vishnu.muthyalu.work@gmail.com")
 
 SWATCHES = ["#484f58", "#ff7b72", "#3fb950", "#d29922", "#58a6ff", "#bc8cff", "#39c5cf", "#c9d1d9"]
 
@@ -43,7 +47,7 @@ def esc(s: str) -> str:
 
 def main() -> None:
     lines, y, i = [], 72, 0
-    LH = 20
+    LH = 19
 
     def line(content: str, extra_gap: int = 0):
         nonlocal y, i
@@ -69,6 +73,8 @@ def main() -> None:
     )
     line(sw.replace("{y}", "{y}"), 2)
 
+    H = y - LH + 24  # last row's top edge + swatch height + bottom padding
+
     anim = "" if STATIC else """
   .ln { opacity: 0; animation: in .35s ease-out forwards; }
   @keyframes in { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
@@ -93,7 +99,7 @@ def main() -> None:
 {chr(10).join(lines)}
 </svg>
 '''
-    OUT.write_text(svg)
+    OUT.write_text(svg, encoding="utf-8")
     print(f"wrote {OUT.name} (last baseline y={y - LH}, height {H})")
 
 

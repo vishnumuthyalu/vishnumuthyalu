@@ -14,28 +14,40 @@ FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 
 PROJECTS = [
     {
-        "slug": "waypoint-api",
-        "title": "Waypoint API",
-        "accent": "#58a6ff",
-        "tagline": "Spec-first URL shortener with click analytics",
-        "bullets": [
-            "OpenAPI 3.1 contract validates every req/response",
-            "Custom aliases, link expiry, click analytics",
-            "Runs on Kubernetes behind NGINX; CI/CD in Actions",
-        ],
-        "stack": ["TypeScript", "Express", "PostgreSQL", "Prisma", "Docker", "k8s", "NGINX"],
-    },
-    {
         "slug": "relay-extension",
         "title": "Relay",
         "accent": "#d2a8ff",
-        "tagline": "git push → plain-English update emails for clients",
+        "tagline": "git push → plain-English client emails, via Claude",
         "bullets": [
-            "GitHub webhooks trigger Claude to summarize commits",
-            "Non-technical summaries emailed on every push",
-            "VS Code extension: one-click webhook + client setup",
+            "Live multi-tenant GitHub App on Fly.io + Supabase",
+            "Remote MCP server with its own OAuth 2.1 server",
+            "Job queue + one-time delivery claims: no dup emails",
         ],
-        "stack": ["TypeScript", "Node.js", "Express", "Claude API", "SQLite", "Docker"],
+        "stack": ["Node.js", "PostgreSQL", "pg-boss", "Claude API", "MCP", "OAuth 2.1", "Fly.io", "Jest"],
+    },
+    {
+        "slug": "waypoint-api",
+        "title": "Waypoint",
+        "accent": "#58a6ff",
+        "tagline": "URL shortener split into 4 TypeScript microservices",
+        "bullets": [
+            "Clicks via Redis Streams: p99 763 ms → 8 ms (k6)",
+            "30,000 / 30,000 clicks recorded at 500 req/s",
+            "GitHub Actions → GHCR → Argo CD GitOps on k8s",
+        ],
+        "stack": ["TypeScript", "Express", "PostgreSQL", "Redis", "Kubernetes", "Argo CD", "NGINX", "k6"],
+    },
+    {
+        "slug": "whisker",
+        "title": "Whisker · CodeRED 2026",
+        "accent": "#ff7b72",
+        "tagline": "Smart crib monitor · won Best Hardware track",
+        "bullets": [
+            "Flask + Socket.IO stream live vitals to parents",
+            "Time-series history endpoints on Tiger Data",
+            "Twilio voice-call alerts; Three.js 3D baby model",
+        ],
+        "stack": ["Python", "Flask", "Socket.IO", "PostgreSQL", "Twilio", "React", "Three.js", "Coral TPU"],
     },
     {
         "slug": "Credit-Risk-Scorecard-Model-Validation-Framework",
@@ -48,7 +60,7 @@ PROJECTS = [
             "WoE features → PDO-scaled logistic scorecard",
             "Discrimination, calibration, PSI, fair-lending checks",
         ],
-        "stack": ["Python", "pandas", "scikit-learn", "statsmodels", "pytest"],
+        "stack": ["Python", "pandas", "scikit-learn", "statsmodels"],
     },
     {
         "slug": "cell-tower-optimizer",
@@ -124,7 +136,7 @@ def card(p: dict) -> str:
 def main() -> None:
     OUT_DIR.mkdir(exist_ok=True)
     for p in PROJECTS:
-        (OUT_DIR / f"{p['slug'].lower()}.svg").write_text(card(p))
+        (OUT_DIR / f"{p['slug'].lower()}.svg").write_text(card(p), encoding="utf-8")
     print(f"wrote {len(PROJECTS)} cards to {OUT_DIR.name}/")
 
 

@@ -9,7 +9,7 @@
 <table>
   <tr>
     <td valign="top"><img src="./ascii-portrait.svg" width="370" alt="ASCII portrait" /></td>
-    <td valign="top"><img src="./info-card.svg" width="490" alt="Rice MS CS student; backend, full-stack and infra; seeking Summer 2027 SWE internships" /></td>
+    <td valign="top"><img src="./info-card.svg" width="490" alt="Rice MS CS student; backend, infra, data and ML; seeking Summer 2027 SWE and Data Science internships" /></td>
   </tr>
 </table>
 
@@ -18,12 +18,15 @@
 <h3><code>vishnu@github ~ $ ls ~/projects --featured</code></h3>
 <table>
   <tr>
-    <td valign="top"><a href="https://github.com/vishnumuthyalu/waypoint-api"><img src="./projects/waypoint-api.svg" width="425" alt="Waypoint API: spec-first URL shortener on Kubernetes" /></a></td>
-    <td valign="top"><a href="https://github.com/vishnumuthyalu/relay-extension"><img src="./projects/relay-extension.svg" width="425" alt="Relay: git push to plain-English client update emails" /></a></td>
+    <td valign="top"><a href="https://github.com/vishnumuthyalu/relay-extension"><img src="./projects/relay-extension.svg" width="425" alt="Relay: hosted GitHub App that turns each push into a plain-English client email, with a remote MCP server" /></a></td>
+    <td valign="top"><a href="https://github.com/vishnumuthyalu/waypoint-api"><img src="./projects/waypoint-api.svg" width="425" alt="Waypoint: URL shortener split into four TypeScript microservices on Kubernetes" /></a></td>
   </tr>
   <tr>
+    <td valign="top"><a href="https://github.com/spengjohn/Whisker-WINNER_CODERED"><img src="./projects/whisker.svg" width="425" alt="Whisker: smart crib monitor, Best Hardware track winner at CodeRED 2026" /></a></td>
     <td valign="top"><a href="https://github.com/vishnumuthyalu/Credit-Risk-Scorecard-Model-Validation-Framework"><img src="./projects/credit-risk-scorecard-model-validation-framework.svg" width="425" alt="Credit Risk Scorecard and model validation framework" /></a></td>
-    <td valign="top"><a href="https://github.com/vishnumuthyalu/cell-tower-optimizer"><img src="./projects/cell-tower-optimizer.svg" width="425" alt="Cell Tower Optimizer: max-coverage placement with ILP" /></a></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2" align="center"><a href="https://github.com/vishnumuthyalu/cell-tower-optimizer"><img src="./projects/cell-tower-optimizer.svg" width="425" alt="Cell Tower Optimizer: max-coverage placement with ILP" /></a></td>
   </tr>
 </table>
 
