@@ -1,8 +1,8 @@
 """Featured-projects strip -> README.md, rotated daily.
 
-Writes one table row of project cards between the PROJECTS markers in
-README.md. GitHub lets a wide table scroll sideways, so visitors can scroll
-or swipe through the cards, and each card links to its own repo.
+Writes one row of project cards between the PROJECTS markers in README.md,
+inside a <pre> block so GitHub scrolls it sideways instead of shrinking the
+cards. Each card links to its own repo.
 
 The order rotates by one card per day, so a different project leads each
 day. The daily workflow runs this script; you can also run it locally:
@@ -35,18 +35,17 @@ CARDS = [
 def strip(today: date) -> str:
     shift = today.toordinal() % len(CARDS)
     ordered = CARDS[shift:] + CARDS[:shift]
-    cells = "\n".join(
-        f'    <td valign="top"><a href="{href}"><img src="./projects/{svg}" width="425" alt="{alt}" /></a></td>'
+    # One <pre> line: GitHub never wraps <pre> and gives it a sideways
+    # scrollbar, so the cards stay full size. Keep every card on ONE line;
+    # a line break between them would stack them vertically.
+    cards = " ".join(
+        f'<a href="{href}"><img src="./projects/{svg}" width="425" alt="{alt}" /></a>'
         for svg, href, alt in ordered
     )
     return (
         f"{START}\n"
         "<sub>scroll or swipe sideways for more projects →</sub>\n"
-        "<table>\n"
-        "  <tr>\n"
-        f"{cells}\n"
-        "  </tr>\n"
-        "</table>\n"
+        f"<pre>{cards}</pre>\n"
         f"{END}"
     )
 
