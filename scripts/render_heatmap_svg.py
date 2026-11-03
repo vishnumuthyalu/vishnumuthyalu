@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data" / "contributions.json"
 OUT = ROOT / "contrib-heatmap.svg"
 
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]  # GitHub's dark levels 0-4
 BG, FG, DIM, ACCENT = "#0d1117", "#c9d1d9", "#6e7681", "#39d353"
 FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 
@@ -33,10 +33,6 @@ def main() -> None:
     cutoff = last - timedelta(days=(last.weekday() + 1) % 7) - timedelta(weeks=52)
     days = [d for d in data["days"] if date.fromisoformat(d["date"]) >= cutoff]
 
-    # top 5% of active days get the neon level-5 colour
-    active = sorted(d["count"] for d in days if d["count"] > 0)
-    neon = active[int(len(active) * 0.95)] if len(active) >= 20 else float("inf")
-
     first = date.fromisoformat(days[0]["date"])
     start = first - timedelta(days=(first.weekday() + 1) % 7)  # back up to Sunday
 
@@ -47,7 +43,7 @@ def main() -> None:
         idx = (dt - start).days
         w, dow = divmod(idx, 7)
         max_week = max(max_week, w)
-        level = 5 if d["count"] >= neon and d["count"] > 0 else min(d["level"], 4)
+        level = min(d["level"], 4)
         x, y = GRID_X + w * STEP, GRID_Y + dow * STEP
         delay = (w + dow) * STAGGER
         tip = f"{d['count']} contribution{'s' if d['count'] != 1 else ''} on {dt:%b %-d, %Y}"
@@ -67,11 +63,11 @@ def main() -> None:
         for i, n in ((1, "Mon"), (3, "Wed"), (5, "Fri"))
     )
 
-    lx = W - PAD_X - 5 * STEP - 70
+    lx = W - PAD_X - 4 * STEP - 70
     legend = f'<text x="{lx - 34}" y="{grid_bottom + 22}" class="m">Less</text>' + "".join(
         f'<rect x="{lx + i * STEP}" y="{grid_bottom + 12}" width="{CELL}" height="{CELL}" rx="2.5" fill="{c}"/>'
         for i, c in enumerate(PALETTE)
-    ) + f'<text x="{lx + 6 * STEP + 4}" y="{grid_bottom + 22}" class="m">More</text>'
+    ) + f'<text x="{lx + 5 * STEP + 4}" y="{grid_bottom + 22}" class="m">More</text>'
 
     footer = (
         f'<tspan class="hi">{st["total"]:,}</tspan> contributions in the last year'
