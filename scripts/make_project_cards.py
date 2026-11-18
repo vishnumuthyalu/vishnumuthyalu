@@ -14,6 +14,19 @@ FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 
 PROJECTS = [
     {
+        "slug": "Calypso-2ND_PLACE_HACKUTA",
+        "title": "Calypso⁻¹ · HackUTA 2026",
+        "path": "calypso",  # display path; repo name is long
+        "accent": "#39c5cf",
+        "tagline": "FaceTime memory companion for people with dementia",
+        "bullets": [
+            "2nd Place Overall + Best Use of Vultr",
+            "FastAPI backend, API contract + SQLite schema",
+            "Face + voice prints on self-hosted models",
+        ],
+        "stack": ["Python", "FastAPI", "SQLite", "OpenCV", "TitaNet", "Claude API", "Vultr", "Chert"],
+    },
+    {
         "slug": "relay-extension",
         "title": "Relay",
         "accent": "#d2a8ff",

@@ -18,6 +18,8 @@ START, END = "<!-- PROJECTS:START -->", "<!-- PROJECTS:END -->"
 # (card file in projects/, link, alt text). Add a card here after adding it
 # to make_project_cards.py.
 CARDS = [
+    ("calypso-2nd_place_hackuta.svg", "https://github.com/vishnumuthyalu/Calypso-2ND_PLACE_HACKUTA",
+     "Calypso: FaceTime memory companion for people with dementia, 2nd Place Overall and Best Use of Vultr at HackUTA 2026"),
     ("relay-extension.svg", "https://github.com/vishnumuthyalu/relay-extension",
      "Relay: hosted GitHub App that turns each push into a plain-English client email, with a remote MCP server"),
     ("waypoint-api.svg", "https://github.com/vishnumuthyalu/waypoint-api",

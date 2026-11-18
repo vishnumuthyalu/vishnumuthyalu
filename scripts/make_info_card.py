@@ -32,6 +32,7 @@ ROWS = [
     ("AI", "Claude API, MCP servers, OAuth 2.1"),
 ]
 HIGHLIGHTS = [
+    "Calypso⁻¹: 2nd Overall + Best Use of Vultr, HackUTA",
     "Relay: live multi-tenant GitHub App + MCP server",
     "Waypoint: 4 microservices, p99 763 ms → 8 ms",
     "Whisker: Best Hardware win at CodeRED 2026",
